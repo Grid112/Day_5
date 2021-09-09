@@ -6,25 +6,31 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        int A, B, C;
+        int row, col, i, j;
+        int arr[][] = new int[10][10];
+        Scanner scan = new Scanner(System.in);
 
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter First number : ");
-        A = sc.nextInt();
-        System.out.print("Enter Second number : ");
-        B = sc.nextInt();
-        System.out.print("Enter Third number : ");
-        C = sc.nextInt();
-        //
-        if (A > B && A > C) {
-            System.out.println(A + "  is largest in " );
-        }
-        else if (B > A && B > C) {
-            System.out.println(B + "  is largest in ");
-        }
-        else {
-            System.out.println(C + "  is largest");
+
+        System.out.print("Enter no of row for the array upto 10 : ");
+        row = scan.nextInt();
+        System.out.print("Enter no of column for the array upto 10 : ");
+        col = scan.nextInt();
+
+
+        System.out.println("Enter " + (row * col) + " Array Elements : ");
+        for (i = 0; i < row; i++) {
+            for (j = 0; j < col; j++) {
+                arr[i][j] = scan.nextInt();
+            }
         }
 
+
+        System.out.print("The Array is :\n");
+        for (i = 0; i < row; i++) {
+            for (j = 0; j < col; j++) {
+                System.out.print(arr[i][j] + "  ");
+            }
+            System.out.println();
+        }
     }
 }
