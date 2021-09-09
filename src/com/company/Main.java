@@ -6,20 +6,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        float HarmonicNumber = 1;
         int N;
-        int Power;
-        int number = 0;
-
-        System.out.println("Enter A No Until Which 2's Table Is Executed:");
+        System.out.print("Enter the number to Check Harmonic expression (1+ 1/2 + 1/3 + ....+ 1/N) : ");
         Scanner Sc = new Scanner(System.in);
         N = Sc.nextInt();
 
-        if(number <= N) {
-            for(int i=0 ; i<=N ; i++) {
-                Power = (int) Math.pow(2 , i);
-
-                System.out.println("2" + "^" + "=" + Power);
+        if(N != 0) {
+            for(int i=1 ; i<=N ; i++) {
+                HarmonicNumber += (float) 1 / i;
+                System.out.println(HarmonicNumber);
             }
+            System.out.println("");
+            System.out.print("Harmonic Value of Number " + N + " is :  " + HarmonicNumber);
         }
+
     }
 }
