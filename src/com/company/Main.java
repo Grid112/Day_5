@@ -1,27 +1,29 @@
 package com.company;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        int HeadFlip = 1;
-        int COUNT = 100;
-        double heads = 0;
-        double tails = 0;
-        for (int i = 1; i <= COUNT; i++) {
-            Random random = new Random();
-            int coin = random.nextInt(2);
-            if (coin == HeadFlip) {
-                System.out.println("Heads");
-                heads += 1;
+        String Year;
+        System.out.println("Enter A Year: " );
+        Scanner Sc = new Scanner(System.in);
+        Year = Sc.nextLine();
+
+        if (Year.length() == 4) {
+            int leapYear = Integer.parseInt(Year);
+            System.out.println("Entered Year is:" +leapYear);
+
+            if((leapYear % 4) == 0 && (leapYear % 100) != 0 || (leapYear % 400) == 0){
+                System.out.println("Entered Year Is Leap Year");
             }
             else {
-                System.out.println("Tails");
-                tails += 1;
+                System.out.println("Entered Year Is Not A Leap Year");
             }
         }
-        System.out.println("percentage of Heads : " + ((heads / COUNT) * 100) + "%");
-        System.out.println("percentage of Tails : " + ((tails / COUNT) * 100) + "%");
+        else {
+            System.out.println("Invalid No! Enter A 4 Digit Number");
+        }
     }
 }
