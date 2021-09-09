@@ -6,18 +6,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        int A, B, Swap;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the value of A");
+        A = sc.nextInt();
+        System.out.println("Enter the value of B");
+        B = sc.nextInt();
+        System.out.println("before swapping numbers A: "+A);
+        System.out.println("before swapping numbers B: "+B);
+        Swap = A;
+        A = B;
+        B = Swap;
+        System.out.println("After swapping A: "+A);
+        System.out.println("After swapping B: "+B);
 
-        int quotient, remainder, dividend, divisor;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter Dividend value : ");
-        dividend = scanner.nextInt();
 
-        System.out.print("Enter Divisor value : ");
-        divisor = scanner.nextInt();
-
-        quotient = dividend / divisor;
-        remainder = dividend % divisor;
-        System.out.println("Quotient = " + quotient);
-        System.out.println("Remainder= " + remainder);
     }
 }
