@@ -6,43 +6,24 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        char character;
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter a Character : ");
-        character = scanner.next().charAt(0);
-        switch (character) {
-            case 'a':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'e':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'i':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'o':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'u':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'A':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'E':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'I':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'O':
-                System.out.println(character + " : is an Vowel");
-                break;
-            case 'U':
-                System.out.println(character + " + : is an Vowel");
-                break;
-            default:
-                System.out.println(character + " : is an Consonent");
+        int A, B, C;
+
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter First number : ");
+        A = sc.nextInt();
+        System.out.print("Enter Second number : ");
+        B = sc.nextInt();
+        System.out.print("Enter Third number : ");
+        C = sc.nextInt();
+        //
+        if (A > B && A > C) {
+            System.out.println(A + "  is largest in " );
+        }
+        else if (B > A && B > C) {
+            System.out.println(B + "  is largest in ");
+        }
+        else {
+            System.out.println(C + "  is largest");
         }
 
     }
