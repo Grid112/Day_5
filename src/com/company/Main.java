@@ -6,24 +6,20 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        String Year;
-        System.out.println("Enter A Year: " );
+        int N;
+        int Power;
+        int number = 0;
+
+        System.out.println("Enter A No Until Which 2's Table Is Executed:");
         Scanner Sc = new Scanner(System.in);
-        Year = Sc.nextLine();
+        N = Sc.nextInt();
 
-        if (Year.length() == 4) {
-            int leapYear = Integer.parseInt(Year);
-            System.out.println("Entered Year is:" +leapYear);
+        if(number <= N) {
+            for(int i=0 ; i<=N ; i++) {
+                Power = (int) Math.pow(2 , i);
 
-            if((leapYear % 4) == 0 && (leapYear % 100) != 0 || (leapYear % 400) == 0){
-                System.out.println("Entered Year Is Leap Year");
+                System.out.println("2" + "^" + "=" + Power);
             }
-            else {
-                System.out.println("Entered Year Is Not A Leap Year");
-            }
-        }
-        else {
-            System.out.println("Invalid No! Enter A 4 Digit Number");
         }
     }
 }
